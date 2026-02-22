@@ -1,17 +1,27 @@
+/**
+ * OOPSBannerApp UC5 – Render OOPS as Banner using Inline Array Initialization
+ *
+ * This version improves UC4 by declaring and initializing
+ * the String array in a single statement using String.join()
+ * inside the array literal.
+ */
+
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String[] lines = new String[7];
+        // Inline array initialization with String.join()
+        String[] lines = {
+            String.join("", "  *****   ", "  *****   ", " ******   ", "  *****   "),
+            String.join("", " **   **  ", " **   **  ", " **   **  ", " **   **  "),
+            String.join("", " **   **  ", " **   **  ", " **   **  ", " **       "),
+            String.join("", " **   **  ", " **   **  ", " ******   ", "  *****   "),
+            String.join("", " **   **  ", " **   **  ", " **       ", "       ** "),
+            String.join("", " **   **  ", " **   **  ", " **       ", " **   **  "),
+            String.join("", "  *****   ", "  *****   ", " **       ", "  *****   ")
+        };
 
-        lines[0] = String.join("", "  *****  ", "  *****  ", " ******  ", "  *****  ");
-        lines[1] = String.join("", " **   ** ", " **   ** ", " **   ** ", " **   ** ");
-        lines[2] = String.join("", " **   ** ", " **   ** ", " **   ** ", " **      ");
-        lines[3] = String.join("", " **   ** ", " **   ** ", " ******  ", "  *****  ");
-        lines[4] = String.join("", " **   ** ", " **   ** ", " **      ", "       **");
-        lines[5] = String.join("", " **   ** ", " **   ** ", " **      ", " **   ** ");
-        lines[6] = String.join("", "  *****  ", "  *****  ", " **      ", "  *****  ");
-
+        // Enhanced for loop to print banner
         for (String line : lines) {
             System.out.println(line);
         }
